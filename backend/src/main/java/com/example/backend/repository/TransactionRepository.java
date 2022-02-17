@@ -1,5 +1,6 @@
-package com.group.presentation.repository;
-import com.group.presentation.model.Customer;
+package com.example.backend.repository;
+
+import com.example.backend.model.Transaction;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -7,13 +8,13 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface CustomerRepository extends CrudRepository<Customer, UUID> {
+public interface TransactionRepository extends CrudRepository<Transaction, UUID> {
 
     @Query(
-            value = "select id, name, phone_number " +
-                    "from customer where phone_number = :phone_number",
+            value = "select id, token " +
+                    "from transaction where token = :token",
             nativeQuery = true
     )
-    Optional<Customer> selectCustomerByPhoneNumber(
-            @Param("phone_number") String phoneNumber);
+    Optional<Transaction> selectTransactionByToken(
+            @Param("token") String token);
 }

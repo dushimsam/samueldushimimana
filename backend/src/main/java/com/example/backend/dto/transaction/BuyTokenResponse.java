@@ -1,5 +1,6 @@
-package com.example.backend.dto;
+package com.example.backend.dto.transaction;
 
+import com.example.backend.model.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,5 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class BuyTokenResponse {
-    private String token;
+    private Transaction transaction;
+    private String message;
+
 }

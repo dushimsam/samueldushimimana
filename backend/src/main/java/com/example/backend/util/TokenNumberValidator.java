@@ -1,12 +1,12 @@
-package com.group.presentation.util;
+package com.example.backend.util;
 
 import org.springframework.stereotype.Component;
 
 import java.util.function.Predicate;
 @Component
-public class PhoneNumberValidator implements Predicate<String> {
+public class TokenNumberValidator implements Predicate<String> {
     @Override
-    public boolean test(String phoneNumber){
-        return phoneNumber.startsWith("+250") && phoneNumber.length() == 13;
+    public boolean test(String tokenNumber){
+        return tokenNumber.startsWith("01") && tokenNumber.length() == 8;
     }
 }

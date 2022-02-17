@@ -1,0 +1,120 @@
+.classname{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 35px;
+    /* identical to box height */
+    color: rgba(26, 72, 148, 0.68);
+    
+    }
+  
+    
+    .school{
+        font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #1A4894;
+    }
+    
+    .subcontainer{
+      
+        margin-left: 3em;
+        // margin-top: 10em;
+    }
+    
+    .classname{
+        font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    // padding-left: 3em;
+    /* identical to box height */
+    
+    
+    color: rgba(26, 72, 148, 0.68);
+    }
+    
+    .school{
+    
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 18em;
+        padding-top:10px;
+        color: #1A4894;
+    }
+    
+    .tables{
+            margin-top: 1.5em;
+    }
+    
+    
+    .tables td{
+        padding: 0.3em 4em;
+        border: 1px solid rgba(0, 0, 0, 0.13);
+        border-collapse: collapse;
+        border-bottom: none;
+       
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+// line-height: 15px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.68);
+    }
+    .tables th{
+      
+        
+    }
+    .container1{
+        box-shadow: 0 0 10px #aaaaaa46;
+        width: 55%;
+        margin:auto;
+        padding:1em 0.5em 1em 0.5em;
+        margin-top: 6em;
+
+    }
+    .container2{
+        box-shadow: 0 0 10px #aaaaaa46;
+        width: 55%;
+        margin:auto;
+        padding:1em 0.5em 1em 0.5em;
+        margin-top: 1em;
+
+    }
+    .container3{
+        box-shadow: 0 0 10px #aaaaaa46;
+        width: 55%;
+        margin:auto;
+        padding:1em 0.5em 1em 0.5em;
+        margin-top: 1em;
+
+    }
+    
+    .pagination{
+        margin-left: 42em;
+        margin-top: 2em;
+      //box-shadow: 3px 3px 3px 3px #aaaaaa1a;
+        box-shadow: 0 0 10px #aaaaaa59;
+        width: 28%;
+        padding: 5px;
+    }
+    
+    // div.container{
+    //     overflow-x: hidden;
+    //     overflow-y: auto;
+    //     height: 400px;
+    // }
+    
