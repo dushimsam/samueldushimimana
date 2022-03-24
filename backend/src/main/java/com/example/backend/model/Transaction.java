@@ -43,4 +43,12 @@ public class Transaction {
     @NotBlank
     @Column(nullable = false)
     private int  days;
+
+    public Transaction(UUID id, String token, String meterNumber, float amount, int days) {
+        this.id = id;
+        this.token = token;
+        this.meterNumber = meterNumber;
+        this.amount = amount;
+        this.days = days;
+    }
 }

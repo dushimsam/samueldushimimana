@@ -24,7 +24,7 @@ public class MeterService {
     @Autowired
     private MeterNumberValidator meterNumberValidator;
 
-    public BuyTokenResponse buyToken(BuyTokenRequest buyTokenRequest) {
+    public BuyTokenResponse register(BuyTokenRequest buyTokenRequest) {
         Optional<Transaction> transaction = transactionRepository.selectTransactionByToken(buyTokenRequest.getToken());
         if (transaction.isEmpty()) throw new IllegalStateException("Unknown token");
 
