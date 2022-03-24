@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: [self-hosted, linux, x64, main]
+    runs-on: ubuntu-latest
     
     strategy:
       matrix:
@@ -36,7 +36,12 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: docker build node js
         run: |
-           docker build ./frontend -t dushsam/frontendexam:lastest
+           docker build ./frontend -t dushsam/frontendexam:lastest .
+           docker build ./backend -t dushsam/backendexam:lastest .
+           docker build ./nginx -t dushsam/nginxexam:lastest .
+           
       - name: docker push
         run: | 
            docker push dushsam/frontendexam:latest
+           docker push dushsam/backendexam:lastest
+           docker push dushsam/nginxexam:lastest
