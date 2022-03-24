@@ -1,17 +1,30 @@
-FROM node:alpine
+# FROM node:alpine
 
-WORKDIR /usr/app
+# WORKDIR /app
 
-COPY package.json ./
+# COPY package.json ./app
 
-COPY package-lock.json ./
+# COPY package-lock.json ./app
 
-COPY ./ ./
+# # COPY ./ ./
 
-# Add bash
-RUN apk add --no-cache bash
+# # Add bash
+# RUN apk add --no-cache bash
 
-RUN chmod +x ./env.sh
+# RUN chmod +x ./env.sh
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+
+FROM node
+
+WORKDIR /app
+
+COPY package*.json /app/
+RUN yarn install
+
+COPY . /app/
+
+EXPOSE 3000
+CMD [ "yarn", "build"]
+
 
