@@ -34,14 +34,19 @@ jobs:
          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-      - name: docker build frontend - backend - nginx
+      - name: docker build frontend
         run: |
            docker build ./frontend -t dushsam/frontendexam:lastest 
+      - name: bocker build backend
+        run: |
            docker build ./backend -t dushsam/backendexam:lastest 
+      - name: docker build nginx 
            docker build ./nginx -t dushsam/nginxexam:lastest 
-           
-      - name: docker push
+      - name: docker build database file mysql 
+           docker build ./mysql -t dushsam/mysqlexam:lastest 
+      - name: docker push to repositories
         run: | 
            docker push dushsam/frontendexam:latest
            docker push dushsam/backendexam:lastest
            docker push dushsam/nginxexam:lastest
+           docker push dushsam/mysqlexam:latest
